@@ -1,17 +1,13 @@
 def add(x, y):
     return x + y
-
 def subtract(x, y):
     return x - y
-
 def multiply(x, y):
     return x * y
-
 def divide(x, y):
     if y == 0:
         return "Undefined"
     return x / y
-
 def main():
     while True:
         print("\nSimple Calculator")
@@ -26,14 +22,12 @@ def main():
         if choice not in ['1', '2', '3', '4']:
             print("Invalid choice. Please try again.")
             continue
-       
         try:
             num1 = float(input("Enter first number: "))
             num2 = float(input("Enter second number: "))
         except ValueError:
             print("Invalid input. Please enter numeric values.")
             continue
-
         if choice == '1':
             result = add(num1, num2)
             operation = "Addition"
@@ -46,7 +40,5 @@ def main():
         elif choice == '4':
             result = divide(num1, num2)
             operation = "Division"
-
         print(f"\n{operation} of {num1} and {num2} is: {result}")
-
 main()
